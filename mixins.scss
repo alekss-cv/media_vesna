@@ -1,0 +1,48 @@
+
+$grid-breakpoints: (
+        mobile: 300px,
+        tablet: 744px,
+        laptop: 1200px,
+        desktop: 1420px,
+) !default;
+
+@mixin breakpoint($bp, $rule: min-width) {
+  @media screen and (#{$rule}: map-get($grid-breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin max-breakpoint($bp, $rule: max-width) {
+  @media screen and (#{$rule}: map-get($grid-breakpoints, $bp) - 1) {
+    @content;
+  }
+}
+
+//fonts
+@mixin big_headlines_font{
+  font-family: 'Oswald', sans-serif;
+  font-size: 52px;
+  color: #3E3E3E;
+  text-align: center;
+  padding-bottom: 60px;
+}
+@mixin little_headlines_font{
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3E3E3E;
+  padding-bottom: 60px;
+}
+@mixin paragraph_font{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #3E3E3E;
+  line-height: 31px;
+}
+//max width
+@mixin max_width{
+  max-width: 1692px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
