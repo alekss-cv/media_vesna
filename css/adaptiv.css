@@ -1,0 +1,9 @@
+@media (max-width: 1700px) {
+  body {
+    background-color: red;
+  }
+  .stages_block_flex {
+    display: block;
+    font-size: 200px;
+  }
+}
